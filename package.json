@@ -19,6 +19,7 @@
   },
   "scripts": {
     "new": "hexo new",
+    "server": "hexo server",
     "build": "hexo generate",
     "predeploy": "yarn build",
     "deploy": "hexo deploy"
