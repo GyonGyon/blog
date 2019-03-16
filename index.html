@@ -65,6 +65,67 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-关于-JS-中-this-的总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2019/03/16/关于-JS-中-this-的总结/" class="article-date">
+  <time datetime="2019-03-16T00:23:13.000Z" itemprop="datePublished">2019-03-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2019/03/16/关于-JS-中-this-的总结/">关于 JS 中 this 的总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><p>默认是全局对象, 严格模式下为 undefined</p>
+</li>
+<li><p>普通函数的 this 在调用时确定</p>
+<ol>
+<li>谁调用, 谁就是 this.</li>
+<li>作为对象方法, 原型链方法, 对象的 getter/setter 方法时也是如此.</li>
+<li>使用 bind call apply 可绑定 this. 替代调用时确定的规则.</li>
+</ol>
+</li>
+<li><p>箭头函数的 this 继承自作用域链上层</p>
+<ol>
+<li>本身没有 this, 也无法绑定 this.</li>
+</ol>
+</li>
+<li><p>new 构造函数, this 为正在构造的对象</p>
+<ol>
+<li>构造函数默认返回 this, 返回对象时除外</li>
+</ol>
+</li>
+<li><p>dom 事件处理函数, this 为触发事件的元素.</p>
+</li>
+<li><p>on-event 内联函数, this 为绑定的元素.</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://gyongyon.github.io/blog/2019/03/16/关于-JS-中-this-的总结/" data-id="cjtard7bm0001slcrwhwqdzid" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-使用 hexo 与 github pages 构建个人博客的总结" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2019/03/15/使用 hexo 与 github pages 构建个人博客的总结/" class="article-date">
@@ -146,7 +207,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gyongyon.github.io/blog/2019/03/15/使用 hexo 与 github pages 构建个人博客的总结/" data-id="cjta0lchh0001v2cr8msubsnt" class="article-share-link">Share</a>
+      <a data-url="https://gyongyon.github.io/blog/2019/03/15/使用 hexo 与 github pages 构建个人博客的总结/" data-id="cjtard7bh0000slcrkf7t6fce" class="article-share-link">Share</a>
       
       
     </footer>
@@ -183,7 +244,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gyongyon.github.io/blog/2019/03/15/Hello Wrold/" data-id="cjta0lchb0000v2crf6rw52zs" class="article-share-link">Share</a>
+      <a data-url="https://gyongyon.github.io/blog/2019/03/15/Hello Wrold/" data-id="cjtard7bp0002slcr6td81f53" class="article-share-link">Share</a>
       
       
     </footer>
@@ -222,6 +283,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/blog/2019/03/16/关于-JS-中-this-的总结/">关于 JS 中 this 的总结</a>
+          </li>
         
           <li>
             <a href="/blog/2019/03/15/使用 hexo 与 github pages 构建个人博客的总结/">使用 hexo 与 github pages 构建个人博客的总结</a>

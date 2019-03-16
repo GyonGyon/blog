@@ -5,19 +5,19 @@
   
 
   
-  <title>Hello World | Yao&#39;s Page</title>
+  <title>关于 JS 中 this 的总结 | Yao&#39;s Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这是我使用 Hexo 与 github page 构建的博客, 计划分享一些学到的知识点.">
+  <meta name="description" content="默认是全局对象, 严格模式下为 undefined  普通函数的 this 在调用时确定  谁调用, 谁就是 this. 作为对象方法, 原型链方法, 对象的 getter/setter 方法时也是如此. 使用 bind call apply 可绑定 this. 替代调用时确定的规则.   箭头函数的 this 继承自作用域链上层  本身没有 this, 也无法绑定 this.   new 构造">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://gyongyon.github.io/blog/2019/03/15/Hello Wrold/index.html">
+<meta property="og:title" content="关于 JS 中 this 的总结">
+<meta property="og:url" content="https://gyongyon.github.io/blog/2019/03/16/关于-JS-中-this-的总结/index.html">
 <meta property="og:site_name" content="Yao&#39;s Page">
-<meta property="og:description" content="这是我使用 Hexo 与 github page 构建的博客, 计划分享一些学到的知识点.">
+<meta property="og:description" content="默认是全局对象, 严格模式下为 undefined  普通函数的 this 在调用时确定  谁调用, 谁就是 this. 作为对象方法, 原型链方法, 对象的 getter/setter 方法时也是如此. 使用 bind call apply 可绑定 this. 替代调用时确定的规则.   箭头函数的 this 继承自作用域链上层  本身没有 this, 也无法绑定 this.   new 构造">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-15T08:55:58.167Z">
+<meta property="og:updated_time" content="2019-03-16T00:33:36.472Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="这是我使用 Hexo 与 github page 构建的博客, 计划分享一些学到的知识点.">
+<meta name="twitter:title" content="关于 JS 中 this 的总结">
+<meta name="twitter:description" content="默认是全局对象, 严格模式下为 undefined  普通函数的 this 在调用时确定  谁调用, 谁就是 this. 作为对象方法, 原型链方法, 对象的 getter/setter 方法时也是如此. 使用 bind call apply 可绑定 this. 替代调用时确定的规则.   箭头函数的 this 继承自作用域链上层  本身没有 this, 也无法绑定 this.   new 构造">
   
     <link rel="alternate" href="/blog/atom.xml" title="Yao&#39;s Page" type="application/atom+xml">
   
@@ -64,10 +64,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Hello Wrold" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-关于-JS-中-this-的总结" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/2019/03/15/Hello Wrold/" class="article-date">
-  <time datetime="2019-03-15T08:31:38.000Z" itemprop="datePublished">2019-03-15</time>
+    <a href="/blog/2019/03/16/关于-JS-中-this-的总结/" class="article-date">
+  <time datetime="2019-03-16T00:23:13.000Z" itemprop="datePublished">2019-03-16</time>
 </a>
     
   </div>
@@ -78,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      关于 JS 中 this 的总结
     </h1>
   
 
@@ -86,12 +86,36 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>这是我使用 Hexo 与 github page 构建的博客, 计划分享一些学到的知识点.</p>
+        <ol>
+<li><p>默认是全局对象, 严格模式下为 undefined</p>
+</li>
+<li><p>普通函数的 this 在调用时确定</p>
+<ol>
+<li>谁调用, 谁就是 this.</li>
+<li>作为对象方法, 原型链方法, 对象的 getter/setter 方法时也是如此.</li>
+<li>使用 bind call apply 可绑定 this. 替代调用时确定的规则.</li>
+</ol>
+</li>
+<li><p>箭头函数的 this 继承自作用域链上层</p>
+<ol>
+<li>本身没有 this, 也无法绑定 this.</li>
+</ol>
+</li>
+<li><p>new 构造函数, this 为正在构造的对象</p>
+<ol>
+<li>构造函数默认返回 this, 返回对象时除外</li>
+</ol>
+</li>
+<li><p>dom 事件处理函数, this 为触发事件的元素.</p>
+</li>
+<li><p>on-event 内联函数, this 为绑定的元素.</p>
+</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gyongyon.github.io/blog/2019/03/15/Hello Wrold/" data-id="cjtard7bp0002slcr6td81f53" class="article-share-link">Share</a>
+      <a data-url="https://gyongyon.github.io/blog/2019/03/16/关于-JS-中-this-的总结/" data-id="cjtard7bm0001slcrwhwqdzid" class="article-share-link">Share</a>
       
       
     </footer>
@@ -100,15 +124,11 @@
     
 <nav id="article-nav">
   
-    <a href="/blog/2019/03/15/使用 hexo 与 github pages 构建个人博客的总结/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          使用 hexo 与 github pages 构建个人博客的总结
-        
-      </div>
-    </a>
   
+    <a href="/blog/2019/03/15/使用 hexo 与 github pages 构建个人博客的总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">使用 hexo 与 github pages 构建个人博客的总结</div>
+    </a>
   
 </nav>
 
